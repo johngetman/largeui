@@ -55,7 +55,11 @@ end
 function panel:Close()
     self:AlphaTo(0, 0.3, 0, function()
         self:Remove()
+        self:OnClose()
     end)
+end
+
+function panel:OnClose()
 end
 
 function panel:Paint(w, h)
